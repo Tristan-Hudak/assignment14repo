@@ -1,7 +1,7 @@
 const getCrafts = async() => {
     try{
         //return (await (await fetch("http://localhost:3000/api/crafts"))).json();
-        let response = await fetch("http://localhost:3000/api/crafts");
+        let response = await fetch("http://localhost/3000/api/crafts");
         return await response.json();
     }
     catch(error) {
@@ -18,7 +18,7 @@ const showCrafts = async() => {
 
 
     //const craftsJSON = await getCrafts();
-    //console.log(craftsJSON);
+    console.log(craftsJSON);
     
     if(craftsJSON == ""){
         console.log("sorry, no Animals");
@@ -76,7 +76,7 @@ const showCrafts = async() => {
         const img = document.createElement("img");
         img.setAttribute("id", "img-holder");
         img.setAttribute("rel", "modal "+modalCounter);
-        img.src = "http://localhost:3000/images/" + craft.image;
+        img.src = "http://localhost/3000/images/" + craft.image;
 
         
 
@@ -101,7 +101,7 @@ const showCrafts = async() => {
 
         const modalImg = document.createElement("img");
         modalImg.setAttribute("id", "img-modal");
-        modalImg.src = "http://localhost:3000/images/" + craft.image;
+        modalImg.src = "http://localhost/3000/images/" + craft.image;
 
         //text area
 
