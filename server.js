@@ -7,7 +7,7 @@ app.use(express.static("public"));
 
 app.get("/",(req,res)=>{
     console.log("soem one is launching");
-    res.sendFile( __dirname + "/index.html");
+    res.sendFile(__dirname + "/index.html");
 });
 
 
@@ -300,11 +300,11 @@ app.get("/api/crafts",(req,res)=>{
         ]
     };
 
-    console.log(crafts);
+    //console.log(crafts);
     res.json(crafts);
 });
 
 
-app.listen(3000),()=>{
+app.listen(3000, ()=> {
     console.log("listening");
-}
+});

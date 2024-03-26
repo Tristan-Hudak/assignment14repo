@@ -34,7 +34,7 @@ const showCrafts = async() => {
     const div5 = document.createElement("div");
 
     const divConstructor = (currentDiv, num) => {
-        console.log(currentDiv);
+        //console.log(currentDiv);
         currentDiv.setAttribute("id", "div"+num);
         currentDiv.setAttribute("class", "img-size");
         currentDiv.classList.add("class","coll1o5");
