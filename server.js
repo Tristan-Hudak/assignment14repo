@@ -301,7 +301,7 @@ app.get("/api/crafts",(req,res)=>{
     };
 
     //console.log(crafts);
-    res.json(crafts);
+    res.send(crafts);
 });
 
 
