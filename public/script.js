@@ -1,6 +1,8 @@
 const getCrafts = async() => {
     try{
-        return (await (await fetch("http://localhost:3000/api/crafts"))).json();
+        //return (await (await fetch("http://localhost:3000/api/crafts"))).json();
+        let response = await fetch("http://localhost:3000/api/crafts");
+        return await response.json();
     }
     catch(error) {
         console.log("error reciveing data");
@@ -9,13 +11,22 @@ const getCrafts = async() => {
 };
 
 const showCrafts = async() => {
-    const craftsJSON = await getCrafts();
-    //console.log(craftsJSON);
+
+    let craftsJSON = await getCrafts();
+
     const craftDiv = document.getElementById("json-container");
-    if(craftDiv == ""){
-        craftDiv.innerHTML = "sorry, no Animals";
+
+
+    //const craftsJSON = await getCrafts();
+    //console.log(craftsJSON);
+    
+    if(craftsJSON == ""){
+        console.log("sorry, no Animals");
         return;
     }
+
+   
+
     const div1 = document.createElement("div");
     const div2 = document.createElement("div");
     const div3 = document.createElement("div");
